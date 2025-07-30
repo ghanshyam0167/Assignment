@@ -102,21 +102,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="AmE-xk-tjD" eventType="touchUpInside" id="cmo-qH-YJs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEc-6V-0Cu">
                                         <rect key="frame" x="0.0" y="54.333333333333314" width="353" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="AmE-xk-tjD" eventType="touchUpInside" id="E0g-JV-dHX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPR-IU-S9y">
                                         <rect key="frame" x="0.0" y="108.66666666666669" width="353" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="AmE-xk-tjD" eventType="touchUpInside" id="axE-Wt-9cf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8f-M5-nsV">
                                         <rect key="frame" x="0.0" y="163" width="353" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="AmE-xk-tjD" eventType="touchUpInside" id="v0k-2B-bo6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -183,6 +195,9 @@
                                         <rect key="frame" x="0.0" y="204" width="353" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Submit Answer"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="AmE-xk-tjD" eventType="touchUpInside" id="r1f-rR-bvi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -213,6 +228,9 @@
                                         <rect key="frame" x="0.0" y="90.333333333333371" width="353" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Submit Answer"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="AmE-xk-tjD" eventType="touchUpInside" id="1aS-8B-tIn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -252,18 +270,23 @@
                         <outlet property="multiLabel2" destination="bQh-jJ-wWo" id="wdn-6Q-xgb"/>
                         <outlet property="multiLabel3" destination="l8t-h9-w9y" id="B6r-0H-3YP"/>
                         <outlet property="multiLabel4" destination="ZCg-ig-clO" id="hDe-i4-BgQ"/>
+                        <outlet property="multiSwitch1" destination="39H-AC-fbz" id="XAA-xn-A9d"/>
+                        <outlet property="multiSwitch2" destination="lJK-pB-YGv" id="o53-bc-ldQ"/>
+                        <outlet property="multiSwitch3" destination="GFG-rJ-Pj9" id="4Vg-lp-wN6"/>
+                        <outlet property="multiSwitch4" destination="npq-ji-MiF" id="h6A-Fy-2uX"/>
                         <outlet property="multipleStackView" destination="R2p-wx-qJ5" id="07X-Mj-9bg"/>
                         <outlet property="questionLabel" destination="uHs-xC-S9d" id="oZx-hK-0fF"/>
                         <outlet property="questionProgressView" destination="CA4-mY-yhx" id="nhI-Tm-6no"/>
                         <outlet property="rangedLabel1" destination="rue-cz-qcd" id="eI6-AI-6Mt"/>
                         <outlet property="rangedLabel2" destination="3me-OQ-HOR" id="9uB-Bp-H59"/>
+                        <outlet property="rangedSlider" destination="Ppy-RF-6Jq" id="wQt-rC-DfA"/>
                         <outlet property="rangedStackView" destination="22n-qy-4pL" id="W5C-5a-GxT"/>
                         <outlet property="singleButton1" destination="4ow-qP-XOD" id="huc-dA-cVQ"/>
                         <outlet property="singleButton2" destination="WEc-6V-0Cu" id="kWT-RL-XC3"/>
                         <outlet property="singleButton3" destination="PPR-IU-S9y" id="2xT-Ia-yoB"/>
                         <outlet property="singleButton4" destination="i8f-M5-nsV" id="Rb1-Kh-IjW"/>
                         <outlet property="singleStackView" destination="UEc-nN-QIU" id="sHg-gX-PoL"/>
-                        <segue destination="dQT-ha-Rpc" kind="show" identifier="Results" id="wCV-7P-PiF"/>
+                        <segue destination="dQT-ha-Rpc" kind="show" identifier="Results" destinationCreationSelector="showResults:" id="wCV-7P-PiF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Xh-um-kYW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -287,7 +310,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aS-hI-F0j">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aS-hI-F0j">
                                         <rect key="frame" x="0.0" y="90" width="377" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -305,10 +328,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="jFS-0r-Z9c">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="pIL-Y3-KuG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="pIL-Y3-KuG">
+                            <connections>
+                                <segue destination="qxX-em-5Pf" kind="unwind" unwindAction="unwindToQuizIntroduction:" id="vQp-mv-N9l"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultAnswerLabel" destination="IKG-XZ-Sq0" id="oqr-eN-23E"/>
+                        <outlet property="resultDefinationLabel" destination="5aS-hI-F0j" id="i5x-O5-OWR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FnV-ka-YSh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qxX-em-5Pf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2399.2366412213742" y="3.5211267605633805"/>
         </scene>
