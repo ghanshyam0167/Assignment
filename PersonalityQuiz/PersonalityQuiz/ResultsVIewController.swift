@@ -39,7 +39,6 @@ class ResultsVIewController: UIViewController {
         
         resultAnswerLabel.text = "You are a \(mostCommonAnswer.rawValue)"
         resultDefinationLabel.text = mostCommonAnswer.defination
- 
     }
    
 
